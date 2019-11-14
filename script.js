@@ -30,6 +30,10 @@ startBtn.addEventListener('click', () => {
   //Creating the timer...
   const intervalId = setInterval(() => {
     sec.textContent = totalSecs;
+    //Just to add zero infront of single nums like 1,2,3
+    if (totalSecs < 10) {
+      sec.textContent = `0${totalSecs}`;
+    }
     totalSecs--;
 
     if (totalSecs < 1) {
@@ -57,7 +61,7 @@ startBtn.addEventListener('click', () => {
       }
     }
     min.textContent = totalMins;
-  }, 1000);
+  }, 100);
 });
 
 //Reset Button

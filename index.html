@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Pte Essay Practice tool</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <center>
+      <h1>Write the essay below</h1>
+      <p class="timer">
+        Timer = <span class="min">19</span>:<span class="sec">60</span>
+      </p>
+      <button class="start btn">Start</button>
+      <div class="essayArea">
+        <textarea
+          name="essay-area"
+          cols="80"
+          rows="18"
+          id="tArea"
+          placeholder="Write Your Essay Here!!!!"
+          disabled
+        ></textarea>
+      </div>
+      <p class="count">Word Count = <span class="wCount">0</span></p>
+      <button class="edit btn">Edit</button>
+      <button class="reset btn">Reset</button>
+    </center>
+    <script src="./script.js"></script>
+  </body>
+</html>

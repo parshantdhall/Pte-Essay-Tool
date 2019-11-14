@@ -53,7 +53,7 @@ startBtn.addEventListener('click', () => {
         });
       } else {
         totalMins--;
-        totalSecs = 60;
+        totalSecs = 59;
       }
     }
     min.textContent = totalMins;
@@ -65,7 +65,7 @@ startBtn.addEventListener('click', () => {
 const resetBtn = document.querySelector('.reset');
 resetBtn.addEventListener('click', () => {
   totalMins = 19;
-  totalSecs = 60;
+  totalSecs = 59;
   sec.textContent = totalSecs;
   min.textContent = totalMins;
   essayArea.innerHTML = `<textarea name="essay-area"

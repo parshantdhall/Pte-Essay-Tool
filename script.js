@@ -61,7 +61,7 @@ startBtn.addEventListener('click', () => {
       }
     }
     min.textContent = totalMins;
-  }, 100);
+  }, 1000);
 });
 
 //Reset Button

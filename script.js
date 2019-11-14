@@ -7,7 +7,15 @@ let totalMins = 19;
 let totalSecs = 59;
 const startBtn = document.querySelector('.start');
 const allParas = [];
+const resetBtn = document.querySelector('.reset');
+const editBtn = document.querySelector('.edit');
 
+// Some initalzing
+textArea.style.cursor = 'not-allowed';
+editBtn.disabled = true;
+resetBtn.disabled = true;
+
+// Word Count Logic
 textArea.addEventListener('keyup', function(e) {
   let essayText = this.value;
   if (e.keyCode != 32) {
@@ -52,9 +60,14 @@ startBtn.addEventListener('click', () => {
         //Inserting paras into Webpage
         allParas.forEach(item => {
           let el = document.createElement('p');
+          let brEl = document.createElement('br');
           el.textContent = item;
           essayArea.appendChild(el);
+          essayArea.appendChild(brEl);
         });
+        // Enabling Edit and Reset buttons
+        editBtn.disabled = false;
+        resetBtn.disabled = false;
       } else {
         totalMins--;
         totalSecs = 59;
@@ -66,7 +79,6 @@ startBtn.addEventListener('click', () => {
 
 //Reset Button
 //Note -: word count not working properly
-const resetBtn = document.querySelector('.reset');
 resetBtn.addEventListener('click', () => {
   totalMins = 19;
   totalSecs = 59;
@@ -79,4 +91,14 @@ resetBtn.addEventListener('click', () => {
   placeholder="Write Your Essay Here!!!!"
   disabled></textarea>`;
   startBtn.disabled = false;
+});
+
+// Edit button
+editBtn.addEventListener('click', () => {
+  //textArea.style.cursor = 'text';
+  essayArea.innerHTML = `<textarea name="essay-area"
+  cols="80"
+  rows="18"
+  id="tArea"
+  placeholder="Write Your Essay Here!!!!">${textArea.value}</textarea>`;
 });

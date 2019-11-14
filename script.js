@@ -4,7 +4,7 @@ const min = document.querySelector('.min');
 const sec = document.querySelector('.sec');
 const wCount = document.querySelector('.wCount');
 let totalMins = 19;
-let totalSecs = 60;
+let totalSecs = 59;
 const startBtn = document.querySelector('.start');
 const allParas = [];
 
